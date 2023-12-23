@@ -1,0 +1,13 @@
+<div class=" w-full h-[42rem] bg-violet-300 flex items-center justify-center">
+  <div class="h-[30rem] w-[30rem] bg-slate-100 rounded-md">
+    <p></p>
+  </div>
+  <div class="h-[30rem] w-[30rem] bg-slate-300 rounded-md flex justify-center">
+    <div class="bg-white border-black border-2 flex flex-col items-center" *ngFor="let item of prod">
+      <input type="text" [(ngModel)]="item.name">
+      <input type="number" [(ngModel)]="item.price">
+      <input type="text" [(ngModel)]="item.brand">
+      <button (click)="updateProd(item._id, item)">update</button>
+    </div>
+  </div>
+</div>
