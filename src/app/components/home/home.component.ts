@@ -12,6 +12,7 @@ export class HomeComponent {
   private apiUrl = 'http://localhost:3000/api/products';
   products :product[] = [];
   totalPages : number = 1;
+  newProduct: any = {}
   constructor(private productService: ProductService){}
 
   ngOnInit(){
@@ -21,6 +22,13 @@ export class HomeComponent {
   getAllProducts(){
     this.productService.getAllProducts().subscribe((data)=>{
       this.products = data as product[];
+    })
+  }
+
+  addProduct(): void{
+    this.productService.addProduct(this.newProduct).subscribe(()=>{
+      this.getAllProducts();
+      this.newProduct  = {};
     })
   }
 
