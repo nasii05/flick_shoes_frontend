@@ -25,6 +25,10 @@ export class ProductService {
     return this.http.get(url);
   }
 
+  addProduct(product: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}api/products`, product);
+  }
+
   getPostsForNextPage(): Observable<any> {
     this.currentPage++;
     return this.getAllProducts();
