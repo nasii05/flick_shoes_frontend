@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { FooterComponent } from './components/partials/footer/footer.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { EditProdComponent } from './components/edit-prod/edit-prod.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EditProdComponent } from './components/edit-prod/edit-prod.component';
     HeaderComponent,
     FooterComponent,
     InventoryComponent,
-    EditProdComponent
+    EditProdComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
